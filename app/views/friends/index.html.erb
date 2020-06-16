@@ -1,1 +1,4 @@
-<h1>coucou</h1>
+<h1>Friends List</h1>
+<% @friends.each do |friend| %>
+<li><%= friend.first_name %></li>
+<% end %>
