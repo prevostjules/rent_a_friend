@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Hello <%= @booking.user.first_name%>!</h1>
+  <ul>You have successfully booked <strong><%= @booking.friend.first_name%></strong>
+    <li>From : <%= @booking.starting_date %></li>
+    <li>To : <%= @booking.ending_date %></li>
+  </ul>
+  <%= link_to "Book another friend", friends_path %>
+</div>
+
+
+
+
+
