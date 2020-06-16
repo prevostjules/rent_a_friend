@@ -1,7 +1,11 @@
 class FriendsController < ApplicationController
 
   def index
-    @friends = Friend.all
+    if params[:cities].present?
+      @friends = Friend.where(city: params[:cities])
+    else
+      @friends = Friend.all
+    end
   end
 
   def show
