@@ -1,9 +1,20 @@
-<h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
+<div class="container">
 
-<%= simple_form_for [@friend, @booking] do |f| %>
-  <%= f.input :starting_date %>
-  <%= f.input :ending_date %>
-  <%= f.button :submit %>
-<% end %>
+  <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
 
-<%= link_to "Back to the Friends List" , friends_path%>
+  <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
+  <p> <%= @friend.email %></p>
+  <p> <%= @friend.birth_date %></p>
+  <p> <%= @friend.phone_number %></p>
+  <p> <%= @friend.description %></p>
+
+
+  <%= simple_form_for [@friend, @booking] do |f| %>
+    <%= f.input :starting_date %>
+    <%= f.input :ending_date %>
+    <%= f.button :submit %>
+  <% end %>
+
+  <%= link_to "Back to the Friends List" , friends_path%>
+
+</div>
