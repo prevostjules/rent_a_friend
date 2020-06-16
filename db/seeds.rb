@@ -34,12 +34,12 @@ City.create(name: "Paris")
 puts "create friends"
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592233060/etty-fidele-6UWqw25wfLI-unsplash_hjgka0.jpg')
-friend = Friend.new(first_name: "Paul", last_name: "Gentil", email:"paul@gentil.com", birth_date:Date.new(1999,2,04), city: City.last)
+friend = Friend.new(first_name: "Paul", last_name: "Gentil", email:"paul@gentil.com", birth_date:Date.new(1999,2,04), city: City.last, phone_number: "0798686767", description: "I'm able to make a large number of hilarious jokes on several topics, including yo mama jokes")
 friend.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 friend.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592233061/julian-wan-WNoLnJo7tS8-unsplash_ygjeft.jpg')
-friend2 = Friend.new(first_name: "Pierre", last_name: "Méchant", email:"Pierre@mechant.com", birth_date:Date.new(1997,2,04), city: City.first)
+friend2 = Friend.new(first_name: "Pierre", last_name: "Méchant", email:"Pierre@mechant.com", birth_date:Date.new(1997,2,04), city: City.first, phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child")
 friend2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
 friend2.save!
 
