@@ -1,1 +1,15 @@
+<div class="container">
+  <h1>Hello <%= @booking.user.first_name%>!</h1>
+  <h2>What do you want to change ?</h2>
+  <%= simple_form_for [@friend, @booking] do |f| %>
+    <%= f.input :starting_date %>
+    <%= f.input :ending_date %>
+    <%= f.button :submit %>
+  <% end %>
+  <%= link_to "Delete",
+              booking_path(@booking),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+  <%= link_to "Book another friend", friends_path %>
+</div>
 
