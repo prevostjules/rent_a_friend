@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
-
+  def home
+    @cities = City.all
+  end
 end
 
 # var = toutes les villes enregistres

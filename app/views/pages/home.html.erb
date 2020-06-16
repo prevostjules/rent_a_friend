@@ -1,11 +1,18 @@
+
 <h2>Select a city to find an awesome friend</h2>
 <p>You will be not alone anymore.. </p>
-
-
 
  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/djd8pzofd/image/upload/v1592307443/samples/people/bicycle.jpg);">
     <div class="container">
       <h1><strong>Rent-a-buddy</strong></h1>
     </div>
   </div>
+
+<%= form_tag friends_path, method: :get do %>
+  <%= select_tag "cities", options_from_collection_for_select(City.all, :id, :name) %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
+
 

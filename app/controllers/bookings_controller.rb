@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
 
   def index
-
+    @user = current_user
+    @bookings = Booking.where(user: @user)
   end
 
   def show
@@ -13,7 +14,6 @@ class BookingsController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
