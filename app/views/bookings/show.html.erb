@@ -1,11 +1,18 @@
-<div class="container">
-  <h1>Hello <%= @booking.user.first_name%>!</h1>
-  <ul>You have successfully booked <strong><%= @booking.friend.first_name%></strong>
-    <li>From : <%= @booking.starting_date %></li>
-    <li>To : <%= @booking.ending_date %></li>
+<div class="container-md text-center card-friend p-3">
+  <h1>Congratulations <%= @booking.user.first_name%>, <br>you're about to meet <br>your new friend!</h1>
+  <ul>You have successfully booked a date with <strong><%= @booking.friend.first_name%></strong>
+
+  <%= cl_image_tag @booking.friend.photo.key, height: 300, width: 300, crop: :fill, class:"avatar-friend-show ml-5 shadow" %>
+
+    <p>It is planned as follow:</p>
+    <p><strong>from:</strong> <%= @booking.starting_date %></p>
+    <p><strong>to:</strong> <%= @booking.ending_date %></p>
+    <br>
+    <br>
   </ul>
-  <%= link_to "Book another friend", friends_path %>
-  <%= link_to "Edit", edit_booking_path(@booking) %>
+  <%= link_to "Book another friend", friends_path, class:"btn btn-success shadow"  %>
+  <%= link_to "Edit", edit_booking_path(@booking), class:"btn btn-secondary shadow" %>
+
 </div>
 
 

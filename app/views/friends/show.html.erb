@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="friend-show__infos d-flex justify-content-around mt-5">
+  <div class="friend-show__infos d-flex align-items-center justify-content-around mt-5">
     <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
     <div class="friend-show__infos-personnal">
     <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
@@ -10,14 +10,14 @@
     </div>
     <div class="friend-show__infos-tags">
       <h2> <%= @friend.birth_date %></h2>
-      <button class="btn btn-primary">beer</button>
-      <button class="btn btn-secondary">football</button>
-      <button class="btn btn-danger">skate</button>
-      <button class="btn btn-warning">fun</button>
+      <button class="badge badge-secondary">beer</button>
+      <button class="badge badge-secondary">football</button>
+      <button class="badge badge-secondary">skate</button>
+      <button class="badge badge-secondary">fun</button>
     </div>
   </div>
 
-  <div class="friend-show__description card__simple p-3 mt-3">
+  <div class="friend-show__description card__simple p-3 mt-5">
     <h2>Description</h2>
     <p><%= @friend.description %></p>
   </div>
@@ -31,7 +31,7 @@
     <% end %>
   </div>
     <div class="container text-center mt-3">
-    <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary' %>
+    <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary mb-3' %>
     </div>
   </div>
 </div>
