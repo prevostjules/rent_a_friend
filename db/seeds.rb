@@ -33,15 +33,26 @@ City.create(name: "Paris")
 
 puts "create friends"
 
-file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592233060/etty-fidele-6UWqw25wfLI-unsplash_hjgka0.jpg')
-friend = Friend.new(first_name: "Paul", last_name: "Gentil", email:"paul@gentil.com", birth_date:Date.new(1999,2,04), city: City.last, phone_number: "0798686767", description: "I'm able to make a large number of hilarious jokes on several topics, including yo mama jokes")
-friend.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384284/Mathieu_ol9xei.jpg')
+friend = Friend.new(first_name: "Matthieu", last_name: "Gentil", email:"matthieu@gentil.com", birth_date:Date.new(1993,2,04), city: City.last, phone_number: "0798686767", description: "I'm able to make a large number of hilarious jokes on several topics, including yo mama jokes")
+friend.photo.attach(io: file, filename: 'matthieu.jpg', content_type: 'image/jpg')
 friend.save!
 
-file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592233061/julian-wan-WNoLnJo7tS8-unsplash_ygjeft.jpg')
-friend2 = Friend.new(first_name: "Pierre", last_name: "Méchant", email:"Pierre@mechant.com", birth_date:Date.new(1997,2,04), city: City.first, phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child")
-friend2.photo.attach(io: file, filename: 'avatar.jpg', content_type: 'image/jpg')
+file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384286/Pauline_rjiend.jpg')
+friend2 = Friend.new(first_name: "Pauline", last_name: "Rigolote", email:"pauline@laposte.com", birth_date:Date.new(1990,2,04), city: City.first, phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child")
+friend2.photo.attach(io: file, filename: 'pauline.jpg', content_type: 'image/jpg')
 friend2.save!
+
+file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384273/Antoine_vyguh4.jpg')
+friend3 = Friend.new(first_name: "Antoine", last_name: "Sérieux", email:"jesuisserieux@vraiment.com", birth_date:Date.new(1999,2,04), city: City.last, phone_number: "0798686767", description: "I'm able to make a large number of hilarious jokes on several topics, including yo mama jokes")
+friend3.photo.attach(io: file, filename: 'antoine.jpg', content_type: 'image/jpg')
+friend3.save!
+
+file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384282/Jules_fjrvay.jpg')
+friend4 = Friend.new(first_name: "Jules", last_name: "Coucou", email:"jules@coucou.com", birth_date:Date.new(1997,2,04), city: City.first, phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child")
+friend4.photo.attach(io: file, filename: 'jules.jpg', content_type: 'image/jpg')
+friend4.save!
+
 
 puts "create bookings"
 
