@@ -17,7 +17,7 @@
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :birth_date %>
+    <%= f.input :birth_date, start_year: Date.today.year - 110, end_year: Date.today.year %>
     <%= f.input :photo, as: :file %>
 
   </div>
