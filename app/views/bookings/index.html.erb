@@ -1,8 +1,14 @@
-<% @bookings.each do |booking| %>
-  Your booked <%= booking.friend.first_name %>
-  from <%= booking.starting_date %>
-  to <%= booking.starting_date %>
-  You can contact him at <%= booking.friend.email %>
-  <%= link_to booking.friend.first_name, friend_path(booking.friend) %>
-<% end %>
-<%= link_to "Back to friends", friends_path %>
+<div class="container-md text-center card-friend p-3">
+  <h1>Please find your <strong>reservations</strong> below:</h1>
+  <br>
+  <br>
+  <% @bookings.each do |booking| %>
+    You've booked <%= link_to booking.friend.first_name, friend_path(booking.friend) %>
+    from <%= booking.starting_date %>
+    to <%= booking.starting_date %> <br>
+    You can contact him at <%= booking.friend.email %>
+    <br> <br>
+  <% end %>
+  <br>
+  <%= link_to "Back to friends", friends_path, class:"btn btn-success shadow" %>
+</div>
