@@ -1,20 +1,37 @@
 <div class="container">
 
-  <%= cl_image_tag @friend.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="friend-show__infos d-flex justify-content-around mt-5">
+    <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
+    <div class="friend-show__infos-personnal">
+    <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
+      <p> <%= @friend.city.name %></p>
+      <p> <%= @friend.email %></p>
+      <p> <%= @friend.phone_number %></p>
+    </div>
+    <div class="friend-show__infos-tags">
+      <h2> <%= @friend.birth_date %></h2>
+      <button class="btn btn-primary">beer</button>
+      <button class="btn btn-secondary">football</button>
+      <button class="btn btn-danger">skate</button>
+      <button class="btn btn-warning">fun</button>
+    </div>
+  </div>
 
-  <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
-  <p> <%= @friend.email %></p>
-  <p> <%= @friend.birth_date %></p>
-  <p> <%= @friend.phone_number %></p>
-  <p> <%= @friend.description %></p>
+  <div class="friend-show__description card__simple p-3 mt-3">
+    <h2>Description</h2>
+    <p><%= @friend.description %></p>
+  </div>
 
-
-  <%= simple_form_for [@friend, @booking] do |f| %>
-    <%= f.input :starting_date %>
-    <%= f.input :ending_date %>
-    <%= f.button :submit %>
-  <% end %>
-
-  <%= link_to "Back to the Friends List" , friends_path%>
-
+  <div class="friend-show__form card__simple p-3 mt-3">
+    <h2>Choose your date</h2>
+    <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
+      <%= f.input :starting_date %>
+      <%= f.input :ending_date %>
+      <%= f.button :submit, class: 'btn btn-secondary' %>
+    <% end %>
+  </div>
+  <div class="container text-center mt-3">
+  <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary' %>
+  </div>
+  </div>
 </div>
