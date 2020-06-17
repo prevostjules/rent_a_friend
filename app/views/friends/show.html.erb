@@ -25,8 +25,8 @@
   <div class="friend-show__form card__simple p-3 mt-3">
     <h2>Choose your date</h2>
     <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
-      <%= f.input :starting_date %>
-      <%= f.input :ending_date %>
+      <%= f.input :starting_date, order: [:day, :month, :year], min: Date.today %>
+      <%= f.input :ending_date, order: [:day, :month, :year], min: Date.today %>
       <%= f.button :submit, class: 'btn btn-secondary' %>
     <% end %>
   </div>
