@@ -9,11 +9,16 @@
           <h2><%= friend.first_name %></h2>
           <p><%= friend.birth_date %></p>
         </div>
-        <p class="mb-3"><%= friend.description %></p>
-        <span class="badge badge-secondary">beer</span>
-        <span class="badge badge-secondary">football</span>
-        <span class="badge badge-secondary">skate</span>
-        <span class="badge badge-secondary">fun</span>
+          <p class="mb-3"><%= friend.description %></p>
+          <div class="d-flex justify-content-between">
+            <div>
+              <span class="badge badge-secondary">beer</span>
+              <span class="badge badge-secondary">football</span>
+              <span class="badge badge-secondary">skate</span>
+              <span class="badge badge-secondary">fun</span>
+            </div>
+          <h2><%= friend.price %>€ / hour</h2>
+        </div>
       </div>
     </div>
   <% end %>
