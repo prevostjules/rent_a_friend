@@ -1,9 +1,9 @@
-<div class="container d-flex flex-column align-items-center">
+<div class="container d-flex flex-column align-items-center min-100vh">
   <h1>Friends List</h1>
   <% @friends.each do |friend| %>
   <%= link_to friend_path(friend), class:"link-card-product" do %>
   <div class="card-product mb-3">
-      <%= cl_image_tag friend.photo.key, height:120, width:120 %>
+      <%= cl_image_tag friend.photo.key, height:120, width:120, class:"mt-3 mb-3" %>
       <div class="card-product-infos">
         <div class="d-flex justify-content-between mb-3">
           <h2><%= friend.first_name %></h2>
