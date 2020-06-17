@@ -1,23 +1,24 @@
-<div class="container">
-
+<div class="container d-flex flex-column align-items-center">
   <h1>Friends List</h1>
   <% @friends.each do |friend| %>
-  <li><%= link_to friend.first_name, friend_path(friend) %></li>
+  <%= link_to friend_path(friend), class:"link-card-product" do %>
+  <div class="card-product mb-3">
+      <%= cl_image_tag friend.photo.key, height:120, width:120 %>
+      <div class="card-product-infos">
+        <div class="d-flex justify-content-between mb-3">
+          <h2><%= friend.first_name %></h2>
+          <p><%= friend.birth_date %></p>
+        </div>
+        <p class="mb-3"><%= friend.description %></p>
+        <span class="badge badge-secondary">beer</span>
+        <span class="badge badge-secondary">football</span>
+        <span class="badge badge-secondary">skate</span>
+        <span class="badge badge-secondary">fun</span>
+      </div>
+    </div>
   <% end %>
-
-</div>
-
-<h1>Friends List</h1>
-  <% @friends.each do |friend| %>
-    <%= link_to friend.first_name, friend_path(friend) %>
 
     <% end %>
 
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
-  </div>
 </div>
 
