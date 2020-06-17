@@ -64,7 +64,7 @@ friend2.photo.attach(io: file, filename: 'joseph.jpg', content_type: 'image/jpg'
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384272/Alexis_1_ftvd56.jpg')
-friend3 = Friend.new(first_name: "Alexis", last_name: "Dupont", email:"alexis@dupont.com", birth_date:Date.new(1995,08,18), city: City.last, phone_number: "0798686767", description: "I did'nt choose the thug life, the thug life chose me...", price: 5)
+friend3 = Friend.new(first_name: "Alexis", last_name: "Dupont", email:"alexis@dupont.com", birth_date:Date.new(1995,8,18), city: City.last, phone_number: "0798686767", description: "I did'nt choose the thug life, the thug life chose me...", price: 5)
 friend3.photo.attach(io: file, filename: 'alexis.jpg', content_type: 'image/jpg')
 friend3.save!
 
