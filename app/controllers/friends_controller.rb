@@ -1,4 +1,6 @@
 class FriendsController < ApplicationController
+  before_action :authenticate_user!, only: :show
+
   def index
     if params[:query].present?
       @friends = Friend.near(params[:query], params[:kms])
@@ -14,7 +16,6 @@ class FriendsController < ApplicationController
       }
     end
     @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
-
   end
 
   def show
