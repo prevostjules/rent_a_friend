@@ -1,6 +1,6 @@
 class FriendsController < ApplicationController
   def index
-      @friends = Friend.all
+    @friends = Friend.algolia_search(params[:query])
   end
 
   def show

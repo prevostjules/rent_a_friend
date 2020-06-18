@@ -8,6 +8,13 @@
     <%#= select_tag "cities", options_from_collection_for_select(City.all, :id, :name), class:"form-control form-text col-sm-3 my-1" %>
     <%#= submit_tag "buddy call !", class: "btn btn-primary" %>
 <%# end %>
+    <%= form_tag friends_path, method: :get do %>
+      <%= text_field_tag :query,
+                          params[:query],
+                          class: "form-control",
+                          placeholder: "Type an address" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
 
