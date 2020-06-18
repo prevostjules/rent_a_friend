@@ -10,10 +10,9 @@
     </div>
     <div class="friend-show__infos-tags">
       <h2> <%= @friend.birth_date %></h2>
-      <button class="badge badge-secondary">beer</button>
-      <button class="badge badge-secondary">football</button>
-      <button class="badge badge-secondary">skate</button>
-      <button class="badge badge-secondary">fun</button>
+      <% @tags.sample(4).each do |tag| %>
+      <span class="badge badge-secondary"><%= tag %></span>
+      <% end %>
       <h2 class="mt-2"><%= @friend.price %>€ / hour</h2>
     </div>
   </div>
