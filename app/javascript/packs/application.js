@@ -38,3 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 
 });
+
+$('.carousel').carousel({
+  interval: 2500
+})

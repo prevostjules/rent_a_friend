@@ -17,3 +17,28 @@
       </div>
     </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-4 p-0">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <% Friend.all.each do |friend| %>
+
+            <div class="carousel-item <%= 'active' if friend == Friend.first %>">
+              <img class="d-block w-100" src="<%= cl_image_path friend.photo.key %>" alt="buddies">
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 pt-3 text-carousel">
+      <br>
+      <h1><strong>Aujourd’hui plus que jamais, cela peut changer la vie de pouvoir parler à quelqu’un..</strong></h1>
+      <br>
+      <br>
+      <p>Chez <strong>Rent-a-buddy</strong>, nous faisons toujours tout pour simplifier les rencontres</p>
+      <p>Nous nous efforçons de créer un endroit où chacun et chacune, dans le monde entier, peut être soi-même et partager de bons moments. Nous effectuons régulièrement des changements et améliorations pour que tou.te.s nos membres se sentent reconnu.e.s et les bienvenu.e.s lorsqu'ils se connectent sur notre plateforme. Rejoignez notre communauté de buddies</p>
+    </div>
+  </div>
+</div>
