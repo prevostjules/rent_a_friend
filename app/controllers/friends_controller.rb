@@ -1,6 +1,10 @@
 class FriendsController < ApplicationController
   def index
-    @friends = Friend.near(params[:query], 20)
+    if params[:query].present?
+      @friends = Friend.near(params[:query], 20)
+    else
+      @friends = Friend.all
+    end
     @friends_map = @friends.geocoded
       @markers = @friends_map.map do |friend|
         {
