@@ -2,8 +2,12 @@ class FriendsController < ApplicationController
   before_action :authenticate_user!, only: :show
 
   def index
-    if params[:query].present?
+    if params[:query].present? && params[:kms].present?
       @friends = Friend.near(params[:query], params[:kms])
+    elsif params[:query].blank?
+      @friends = Friend.all
+    elsif params[:kms].blank?
+      @friends = Friend.near(params[:query], 20)
     else
       @friends = Friend.all
     end
