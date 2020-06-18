@@ -1,7 +1,7 @@
 class FriendsController < ApplicationController
   def index
-      @friends = Friend.all
-      @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
+    @friends = Friend.algolia_search(params[:query])
+    @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
   end
 
   def show

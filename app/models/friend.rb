@@ -10,6 +10,12 @@ class Friend < ApplicationRecord
   validates :email, presence: true
   validates :birth_date, presence: true
 
+  include AlgoliaSearch
+
+  algoliasearch do
+    attributes :address
+  end
+
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 end
