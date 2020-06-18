@@ -4,7 +4,7 @@
     <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
     <div class="friend-show__infos-personnal">
     <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
-      <p> <%= @friend.city.name %></p>
+      <p> <%= @friend.address %></p>
       <p> <%= @friend.email %></p>
       <p> <%= @friend.phone_number %></p>
     </div>
