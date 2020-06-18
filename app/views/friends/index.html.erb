@@ -1,5 +1,6 @@
 <div class="container min-100vh">
   <h1>Friends List</h1>
+
   <div class="row">
     <% @friends.each do |friend| %>
       <div class="col-12 col-lg-6">
@@ -28,3 +29,10 @@
     <% end %>
   </div>
 </div>
+
+
+  <div id="map"
+       style="width: 800px; height: 600px;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+

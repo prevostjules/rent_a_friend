@@ -1,0 +1,7 @@
+<h2><%= friend.first_name %></h2>
+<p><%= friend.address %></p>
+
+<%= link_to friend_path(friend) do%>
+  <%= cl_image_tag friend.photo.key, height:30, width:30 %>
+<% end %>
+
