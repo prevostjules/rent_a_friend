@@ -1,8 +1,14 @@
 <div class="container-md text-center card-friend p-3 min-100vh">
-  <h1>Please find your <strong>reservations</strong> below:</h1>
-  <br>
-  <br>
+
+    <% if @bookings.empty? %>
+    <h1>You didn't make any reservation yet</h1>
+    <% else %>
+    <% end %>
+
   <% @bookings.each do |booking| %>
+    <h1>Please find your <strong>reservations</strong> below:</h1>
+    <br>
+    <br>
     You've booked <%= link_to booking.friend.first_name, friend_path(booking.friend) %>
     from <%= booking.starting_date %>
     to <%= booking.starting_date %> <br>
