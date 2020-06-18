@@ -132,10 +132,6 @@ friend2 = Friend.new(first_name: "Florian", last_name: "AllezOM", email:"florian
 friend2.photo.attach(io: file, filename: 'Florian.jpg', content_type: 'image/jpg')
 friend2.save!
 
-puts "create bookings"
-
-Booking.create(starting_date:Date.new(2020-06-16), ending_date:Date.new(2020-06-17), user: User.first, friend: Friend.first)
-Booking.create(starting_date:Date.new(2020-06-17), ending_date:Date.new(2020-06-19), user: User.last, friend: Friend.last)
 
 puts "on est trop fort !"
 

@@ -1,7 +1,6 @@
-<h2><%= friend.first_name %></h2>
-<p><%= friend.address %></p>
-
-<%= link_to friend_path(friend) do%>
-  <%= cl_image_tag friend.photo.key, height:30, width:30 %>
+<%= link_to friend_path(friend), class:"popup-link" do %>
+  <%= cl_image_tag friend.photo.key, height:200, width:200, class:"popup-image" %>
+  <h2><%= friend.first_name %></h2>
+  <p><%= friend.address %></p>
 <% end %>
 

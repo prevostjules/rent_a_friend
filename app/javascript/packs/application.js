@@ -26,6 +26,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import "bootstrap";
 
 // Internal imports, e.g:
+
+import "../plugins/flatpickr"
 import { initMapbox } from '../plugins/init_mapbox';
 import { loadDynamicBannerText } from '../components/banner';
 import { initAutocomplete } from '../plugins/init_autocomplete';
