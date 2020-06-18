@@ -1,38 +1,44 @@
 <div class="container min-100vh">
-
-  <div class="friend-show__infos d-flex align-items-center justify-content-around mt-5">
-    <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
-    <div class="friend-show__infos-personnal">
-    <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
-      <p> <%= @friend.address %></p>
-      <p> <%= @friend.email %></p>
-      <p> <%= @friend.phone_number %></p>
-    </div>
-    <div class="friend-show__infos-tags">
-      <h2> <%= @friend.birth_date %></h2>
-      <button class="badge badge-secondary">beer</button>
-      <button class="badge badge-secondary">football</button>
-      <button class="badge badge-secondary">skate</button>
-      <button class="badge badge-secondary">fun</button>
-      <h2 class="mt-2"><%= @friend.price %>€ / hour</h2>
-    </div>
-  </div>
-
-  <div class="friend-show__description card__simple p-3 mt-5">
-    <h2>Description</h2>
-    <p><%= @friend.description %></p>
-  </div>
-
-  <div class="friend-show__form card__simple p-3 mt-3">
-    <h2>Choose your date</h2>
-    <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
-      <%= f.input :starting_date, order: [:day, :month, :year], min: Date.today %>
-      <%= f.input :ending_date, order: [:day, :month, :year], min: Date.today %>
-      <%= f.button :submit, class: 'btn btn-secondary' %>
-    <% end %>
-  </div>
-    <div class="container text-center mt-3">
-    <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary mb-3' %>
-    </div>
+  <div class="row text-center mt-5">
+        <div class="col-12 col-lg-4">
+            <div class="friend-show__infos">
+              <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="friend-show__infos-personnal">
+              <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
+              <p> <%= @friend.address %></p>
+              <p> <%= @friend.email %></p>
+              <p> <%= @friend.phone_number %></p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4">
+            <div class="friend-show__infos-tags">
+              <h2> <%= @friend.birth_date %></h2>
+              <button class="badge badge-secondary">beer</button>
+              <button class="badge badge-secondary">football</button>
+              <button class="badge badge-secondary">skate</button>
+              <button class="badge badge-secondary">fun</button>
+              <h2 class="mt-2"><%= @friend.price %>€ / hour</h2>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="friend-show__description card__simple p-3 mt-5">
+              <h2>Description</h2>
+              <p><%= @friend.description %></p>
+            </div>
+          <div class="friend-show__form card__simple p-3 mt-3">
+            <h2>Choose your date</h2>
+              <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
+              <%= f.input :starting_date, order: [:day, :month, :year], min: Date.today %>
+              <%= f.input :ending_date, order: [:day, :month, :year], min: Date.today %>
+              <%= f.button :submit, class: 'btn btn-secondary' %>
+              <% end %>
+          </div>
+          <div class="container text-center mt-3">
+             <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary mb-3' %>
+          </div>
+        </div>
   </div>
 </div>
