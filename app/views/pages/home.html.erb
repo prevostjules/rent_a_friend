@@ -1,13 +1,12 @@
-
   <div id="header" class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cms-internationsgmbh.netdna-ssl.com/cdn/image/article/public/cms-media/public/most-welcoming-countries_s583329655.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-12 col-sm-6">
             <h1>Rent a buddy</h1>
             <p><span id="banner-typed-text"></span></p>
-            <%= form_tag friends_path, method: :get do %>
-            <%= select_tag "cities", options_from_collection_for_select(City.all, :id, :name), class:"form-control form-text col-sm-3 my-1" %>
-            <%= submit_tag "buddy call !", class: "btn btn-primary" %>
+              <%#= form_tag friends_path, method: :get do %>
+              <%#= select_tag "cities", options_from_collection_for_select(City.all, :id, :name), class:"form-control form-text col-sm-3 my-1" %>
+              <%#= submit_tag "buddy call !", class: "btn btn-primary" %>
             <% end %>
           </div>
         </div>

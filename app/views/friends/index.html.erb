@@ -14,11 +14,10 @@
                     <p class="mb-3"><%= friend.description %></p>
                       <div class="d-flex justify-content-between">
                         <div>
-                          <span class="badge badge-secondary">beer</span>
-                          <span class="badge badge-secondary">football</span>
-                          <span class="badge badge-secondary">skate</span>
-                          <span class="badge badge-secondary">fun</span>
-                        </div>
+                         <% @tags.sample(4).each do |tag| %>
+                          <span class="badge badge-secondary"><%= tag %></span>
+                        <% end %>
+                      </div>
                     <h2><%= friend.price %>€ / hour</h2>
                   </div>
               </div>
@@ -26,8 +25,6 @@
          <% end %>
 
       </div>
-
     <% end %>
   </div>
 </div>
-

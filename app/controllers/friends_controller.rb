@@ -1,14 +1,12 @@
 class FriendsController < ApplicationController
   def index
-    if params[:cities].present?
-      @friends = Friend.where(city: params[:cities])
-    else
       @friends = Friend.all
-    end
+      @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
   end
 
   def show
     @friend = Friend.find(params[:id])
     @booking = Booking.new
+    @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
   end
 end

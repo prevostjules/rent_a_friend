@@ -8,7 +8,7 @@
         <div class="col-12 col-lg-4">
             <div class="friend-show__infos-personnal">
               <h2> <%= @friend.first_name %> <%= @friend.last_name %></h2>
-              <p> <%= @friend.city.name %></p>
+              <p> <%= @friend.address %></p>
               <p> <%= @friend.email %></p>
               <p> <%= @friend.phone_number %></p>
             </div>
@@ -28,7 +28,6 @@
               <h2>Description</h2>
               <p><%= @friend.description %></p>
             </div>
-
           <div class="friend-show__form card__simple p-3 mt-3">
             <h2>Choose your date</h2>
               <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
