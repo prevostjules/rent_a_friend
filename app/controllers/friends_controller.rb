@@ -1,7 +1,8 @@
 class FriendsController < ApplicationController
   def index
 
-      @friends = Friend.geocoded
+    @friends = Friend.near(params[:query], 20)
+     @friends = Friend.geocoded
 
       @markers = @friends.map do |friend|
         {
@@ -10,7 +11,6 @@ class FriendsController < ApplicationController
           infoWindow: render_to_string(partial: "info_window", locals: { friend: friend }),
         }
       end
-
     @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
 
   end
