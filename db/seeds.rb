@@ -42,7 +42,7 @@ friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384273/Antoine_vyguh4.jpg')
 friend3 = Friend.new(first_name: "Antoine", last_name: "Sérieux", email:"jesuisserieux@vraiment.com", birth_date:Date.new(1990,11,03), address: "
-5 Place Longchamps, Bordeaux", phone_number: "0798686767", description: "Fishing relaxes me, it's like yoga. Except I still get to kill something!", price: 12)
+165 Rue Fondaudège, Bordeaux", phone_number: "0798686767", description: "Fishing relaxes me, it's like yoga. Except I still get to kill something!", price: 12)
 friend3.photo.attach(io: file, filename: 'antoine.jpg', content_type: 'image/jpg')
 friend3.save!
 
@@ -68,7 +68,7 @@ friend3.photo.attach(io: file, filename: 'alexis.jpg', content_type: 'image/jpg'
 friend3.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384279/Jerome_esvlbr.jpg')
-friend4 = Friend.new(first_name: "Jerôme", last_name: "Biscoto", email:"jerome@biscoto.com", birth_date:Date.new(1988,2,12), address: "10 rue de Clovis, Paris", phone_number: "078765677", description: "I'm not wearing any socks, I prefer long barefoot walk on the woods, listening to wild animals and sometimes screaming with them, join me for a huge adventure!", price: 10)
+friend4 = Friend.new(first_name: "Jerôme", last_name: "Biscoto", email:"jerome@biscoto.com", birth_date:Date.new(1988,2,12), address: "63 boulevard garibaldi, Paris", phone_number: "078765677", description: "I'm not wearing any socks, I prefer long barefoot walk on the woods, listening to wild animals and sometimes screaming with them, join me for a huge adventure!", price: 10)
 friend4.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpg')
 friend4.save!
 
