@@ -41,7 +41,7 @@ friend2.photo.attach(io: file, filename: 'pauline.jpg', content_type: 'image/jpg
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384273/Antoine_vyguh4.jpg')
-friend3 = Friend.new(first_name: "Antoine", last_name: "Sérieux", email:"jesuisserieux@vraiment.com", birth_date:Date.new(1990,11,03), address: "
+friend3 = Friend.new(first_name: "Antoine", last_name: "Marcel", email:"stadetoulousain@olympique.com", birth_date:Date.new(1990,11,03), address: "
 165 Rue Fondaudège, Bordeaux", phone_number: "0798686767", description: "Fishing relaxes me, it's like yoga. Except I still get to kill something!", price: 12)
 friend3.photo.attach(io: file, filename: 'antoine.jpg', content_type: 'image/jpg')
 friend3.save!
@@ -73,62 +73,62 @@ friend4.photo.attach(io: file, filename: 'jerome.jpg', content_type: 'image/jpg'
 friend4.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384283/Lilian_heupbl.jpg')
-friend2 = Friend.new(first_name: "Lilian", last_name: "Costaud", email:"lilian@laposte.com", birth_date:Date.new(1992,3,18), address: "28 rue des Marrons, Bordeaux
+friend2 = Friend.new(first_name: "Lilian", last_name: "Costaud", email:"lilian@laposte.com", birth_date:Date.new(1992,3,18), address: "28 cours Alsace-Lorraine, Bordeaux
 ", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 30)
 friend2.photo.attach(io: file, filename: 'lilian.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384282/Julie_yjh7hx.jpg')
-friend2 = Friend.new(first_name: "Julie", last_name: "Cake", email:"julie@laposte.com", birth_date:Date.new(1993,3,18), address: "28 rue du Gâteau, Lyon
+friend2 = Friend.new(first_name: "Julie", last_name: "Cake", email:"julie@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Audran, Lyon
 ", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
 friend2.photo.attach(io: file, filename: 'julie.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384276/Edouard_ksk1nb.jpg')
-friend2 = Friend.new(first_name: "Edouard", last_name: "Fun", email:"edouard@laposte.com", birth_date:Date.new(1993,3,18), address: "28 rue du Gâteau, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Edouard", last_name: "Fun", email:"edouard@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Auguste Comte, Lyon
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 78)
 friend2.photo.attach(io: file, filename: 'Edouard.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384277/Fabiola_ti4gra.jpg')
-friend2 = Friend.new(first_name: "Fabiola", last_name: "Samba", email:"fabiola@laposte.com", birth_date:Date.new(1986,3,18), address: "28 rue du Gâteau, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Fabiola", last_name: "Samba", email:"fabiola@laposte.com", birth_date:Date.new(1986,3,18), address: "1 Rue d'Auvergne, Lyon
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 59)
 friend2.photo.attach(io: file, filename: 'Fabiola.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384272/Allan_maxwg8.jpg')
-friend2 = Friend.new(first_name: "Allan", last_name: "Fight", email:"allan@laposte.com", birth_date:Date.new(1993,3,18), address: "28 rue du Gâteau, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Allan", last_name: "Fight", email:"allan@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Anselme, Lyon
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 40)
 friend2.photo.attach(io: file, filename: 'Allan.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384290/Yohann_he720g.jpg')
-friend2 = Friend.new(first_name: "Yohann", last_name: "Aviator", email:"yohann@laposte.com", birth_date:Date.new(1985,3,18), address: "28 rue du Gâteau, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Yohann", last_name: "Aviator", email:"yohann@laposte.com", birth_date:Date.new(1985,3,18), address: "1 Rue d'Amsterdam, Lyon
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 180)
 friend2.photo.attach(io: file, filename: 'Yohann.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384289/Valentine_ncifnh.jpg')
-friend2 = Friend.new(first_name: "Valentine", last_name: "Pets", email:"valentine@laposte.com", birth_date:Date.new(1985,3,18), address: "28 rue du Gâteau, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Valentine", last_name: "Pets", email:"valentine@laposte.com", birth_date:Date.new(1985,3,18), address: "1 Rue Albertini, Marseille
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 34)
 friend2.photo.attach(io: file, filename: 'Valentine.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384288/Romain_itnhh7.jpg')
-friend2 = Friend.new(first_name: "Romain", last_name: "Boat", email:"romain@laposte.com", birth_date:Date.new(1989,3,18), address: "28 rue du Gâteau, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Romain", last_name: "Boat", email:"romain@laposte.com", birth_date:Date.new(1989,3,18), address: "1 Cours Arnaud, Marseille
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 55)
 friend2.photo.attach(io: file, filename: 'Romain.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384287/Quentin_t143pe.jpg')
-friend2 = Friend.new(first_name: "Quentin", last_name: "Late", email:"quentin@laposte.com", birth_date:Date.new(1993,3,18), address: "28 rue du Gâteau, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Quentin", last_name: "Late", email:"quentin@laposte.com", birth_date:Date.new(1993,3,18), address: "1 rue Arnaud, Marseille
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 100)
 friend2.photo.attach(io: file, filename: 'Quentin.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384278/Florian_mmt3ld.jpg')
-friend2 = Friend.new(first_name: "Florian", last_name: "Teacher", email:"florian@laposte.com", birth_date:Date.new(1985,3,18), address: "28 rue du Gâteau, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Florian", last_name: "AllezOM", email:"florian@laposte.com", birth_date:Date.new(1985,3,18), address: "3 Boulevard Michelet, Marseille
+", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 400)
 friend2.photo.attach(io: file, filename: 'Florian.jpg', content_type: 'image/jpg')
 friend2.save!
 
