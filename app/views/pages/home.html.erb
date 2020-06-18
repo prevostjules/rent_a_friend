@@ -7,9 +7,10 @@
           <%= form_tag friends_path, method: :get do %>
             <%= text_field_tag :query,
                                 params[:query],
-                                class: "form-control",
+                                class: "form-control form-text col-sm-3 my-1",
                                 placeholder: "Type an address",
-                                class:"form-control form-text col-sm-3 my-1" %>
+                                autocomplete: "off",
+                                id: "friends_address" %>
              <%= submit_tag "Search", class: "btn btn-primary" %>
           <% end %>
         </div>

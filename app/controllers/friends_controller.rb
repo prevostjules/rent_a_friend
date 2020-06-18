@@ -1,6 +1,6 @@
 class FriendsController < ApplicationController
   def index
-    @friends = Friend.algolia_search(params[:query])
+    @friends = Friend.near(params[:query], 20)
     @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
   end
 
