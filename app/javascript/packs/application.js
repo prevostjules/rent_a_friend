@@ -33,7 +33,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
-  loadDynamicBannerText();
   initAutocomplete();
   initMapbox();
+  loadDynamicBannerText();
 });
