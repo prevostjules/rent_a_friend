@@ -1,4 +1,6 @@
 class FriendsController < ApplicationController
+  before_action :authenticate_user!, only: :show
+
   def index
     @friends = Friend.near(params[:query], 20)
     @friends_map = @friends.geocoded
@@ -10,7 +12,6 @@ class FriendsController < ApplicationController
         }
       end
     @tags = ["Fun", "Enthusiastic", "Wine", "Beer", "Crazy", "Playful", "Thrilled", "Dynamic", "Bold", "Foolish", "Democratic"]
-
   end
 
   def show
