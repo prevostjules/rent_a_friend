@@ -3,8 +3,9 @@
     <% if @friends.blank? %>
 
       <div class="col-12">
-        <p>No friends around <%= params[:query] %>. Make a new search : </p>
-        <%= form_tag friends_path, class:"col-sm-3 pl-0", method: :get do %>
+        <p><strong>No buddies around <%= params[:query] %>.</strong></p>
+        <p>Make a new search my dear :</p>
+        <%= form_tag friends_path, class:"col-sm-12 justify-content-between", method: :get do %>
           <%= text_field_tag :query,
                               params[:query],
                               class: "form-control form-text my-1",
@@ -14,12 +15,13 @@
           <%= number_field_tag :kms %>
           <%= submit_tag "Buddy call !", class: "btn btn-primary" %>
         <% end %>
-
+        <br>
+        <br>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <% Friend.all.each do |friend| %>
               <div class="carousel-item <%= 'active' if friend == Friend.first %>">
-                <img class="d-block w-100" src="<%= cl_image_path friend.photo.key %>" alt="buddies">
+                <img class="d-block photo" src="<%= cl_image_path friend.photo.key %>" alt="buddies">
               </div>
             <% end %>
           </div>

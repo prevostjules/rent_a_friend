@@ -5,3 +5,20 @@
   color: white;
   text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
 }
+
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.photo {
+  width: 550px;
+  height: 550px;
+  margin-left: 225px;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
