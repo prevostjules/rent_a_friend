@@ -58,8 +58,9 @@
                     <p class="unset-mb"><strong>to: </strong><%= booking.ending_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
                   </div>
                 <% end %>
-
               <% end %>
+            <% else %>
+              <h2 class="unset-mb"><%= @friend.first_name %> is totally available</h2>
             <% end %>
           </div>
 
