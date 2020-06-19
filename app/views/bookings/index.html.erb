@@ -10,7 +10,7 @@
                   <%= cl_image_tag booking.friend.photo.key, class:"avatar-large m-3" %>
                   <div class="d-flex flex-column" >
                     <div>
-                      <h2><%= link_to booking.friend.first_name, friend_path(booking.friend) %> From <%= booking.starting_date %> To <%= booking.starting_date %></h2>
+                      <p style="font-size: 18px"><%= link_to booking.friend.first_name, friend_path(booking.friend) %> from <strong><%= booking.starting_date %></strong> to <strong><%= booking.starting_date %></strong></p>
                     </div>
                     <p>You can contact him at <%= booking.friend.email %></p>
                   </div>
