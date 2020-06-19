@@ -74,61 +74,61 @@ friend4.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384283/Lilian_heupbl.jpg')
 friend2 = Friend.new(first_name: "Lilian", last_name: "Costaud", email:"lilian@laposte.com", birth_date:Date.new(1992,3,18), address: "28 cours Alsace-Lorraine, Bordeaux
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 30)
+", phone_number: "078765677", description: "Young, wild and free. Please be on time when we will me, I have things to do after.", price: 30)
 friend2.photo.attach(io: file, filename: 'lilian.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384282/Julie_yjh7hx.jpg')
-friend2 = Friend.new(first_name: "Julie", last_name: "Cake", email:"julie@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Audran, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 50)
+friend2 = Friend.new(first_name: "Julie", last_name: "Cake", email:"julie@laposte.com", birth_date:Date.new(1993,8,11), address: "1 Rue Audran, Lyon
+", phone_number: "078765677", description: "I love baking, sharing cakes with friends and my hamster. I can make you diabetic after just 2 weeks!", price: 50)
 friend2.photo.attach(io: file, filename: 'julie.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384276/Edouard_ksk1nb.jpg')
-friend2 = Friend.new(first_name: "Edouard", last_name: "Fun", email:"edouard@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Auguste Comte, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 78)
+friend2 = Friend.new(first_name: "Edouard", last_name: "Fun", email:"edouard@laposte.com", birth_date:Date.new(1993,10,10), address: "1 Rue Auguste Comte, Lyon
+", phone_number: "078765677", description: "I always keep a loaded gun on my nightstand in the event of an intruder, so I can shoot myself tp avoid meeting new people.", price: 78)
 friend2.photo.attach(io: file, filename: 'Edouard.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384277/Fabiola_ti4gra.jpg')
-friend2 = Friend.new(first_name: "Fabiola", last_name: "Samba", email:"fabiola@laposte.com", birth_date:Date.new(1986,3,18), address: "1 Rue d'Auvergne, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 59)
+friend2 = Friend.new(first_name: "Fabiola", last_name: "Samba", email:"fabiola@laposte.com", birth_date:Date.new(1986,2,27), address: "1 Rue d'Auvergne, Lyon
+", phone_number: "078765677", description: "I love dancing, discovering new things. Very good to defend myself, especially with an umbrella!", price: 59)
 friend2.photo.attach(io: file, filename: 'Fabiola.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384272/Allan_maxwg8.jpg')
-friend2 = Friend.new(first_name: "Allan", last_name: "Fight", email:"allan@laposte.com", birth_date:Date.new(1993,3,18), address: "1 Rue Anselme, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 40)
+friend2 = Friend.new(first_name: "Allan", last_name: "Fight", email:"allan@laposte.com", birth_date:Date.new(1993,6,5), address: "1 Rue Anselme, Lyon
+", phone_number: "078765677", description: "I can show you the world, shining, shimmering, splendid... fan of Disney movies I'll be glad to go the movie with you.", price: 40)
 friend2.photo.attach(io: file, filename: 'Allan.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384290/Yohann_he720g.jpg')
-friend2 = Friend.new(first_name: "Yohann", last_name: "Aviator", email:"yohann@laposte.com", birth_date:Date.new(1985,3,18), address: "1 Rue d'Amsterdam, Lyon
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 180)
+friend2 = Friend.new(first_name: "Yohann", last_name: "Aviator", email:"yohann@laposte.com", birth_date:Date.new(1985,1,10), address: "1 Rue d'Amsterdam, Lyon
+", phone_number: "078765677", description: "Brunch eater, I also like running, clubbing, partying, don't hesitate to book me if you need a +1 to your private parties!", price: 180)
 friend2.photo.attach(io: file, filename: 'Yohann.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384289/Valentine_ncifnh.jpg')
-friend2 = Friend.new(first_name: "Valentine", last_name: "Pets", email:"valentine@laposte.com", birth_date:Date.new(1985,3,18), address: "1 Rue Albertini, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 34)
+friend2 = Friend.new(first_name: "Valentine", last_name: "Pets", email:"valentine@laposte.com", birth_date:Date.new(1985,5,19), address: "1 Rue Albertini, Marseille
+", phone_number: "078765677", description: "Don't let my nice face fool you, I'm a real tiger on the ring, passionate about boxing, I can show you the best underground clubs...", price: 34)
 friend2.photo.attach(io: file, filename: 'Valentine.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384288/Romain_itnhh7.jpg')
-friend2 = Friend.new(first_name: "Romain", last_name: "Boat", email:"romain@laposte.com", birth_date:Date.new(1989,3,18), address: "1 Cours Arnaud, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 55)
+friend2 = Friend.new(first_name: "Romain", last_name: "Boat", email:"romain@laposte.com", birth_date:Date.new(1989,4,17), address: "1 Cours Arnaud, Marseille
+", phone_number: "078765677", description: "New in Marseille we can discover this city together. I used to live in Bordeaux. Good at drinking alcohol. Nice with new people (less with old friends). Afraid of dogs.", price: 55)
 friend2.photo.attach(io: file, filename: 'Romain.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384287/Quentin_t143pe.jpg')
-friend2 = Friend.new(first_name: "Quentin", last_name: "Late", email:"quentin@laposte.com", birth_date:Date.new(1993,3,18), address: "1 rue Arnaud, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 100)
+friend2 = Friend.new(first_name: "Quentin", last_name: "Late", email:"quentin@laposte.com", birth_date:Date.new(1993,6,20), address: "1 rue Arnaud, Marseille
+", phone_number: "078765677", description: "Like to cook, good dancer, Vikings fan, college graduated and have an adult job, exercise on the reg, enjoy the beach, cat lover.", price: 100)
 friend2.photo.attach(io: file, filename: 'Quentin.jpg', content_type: 'image/jpg')
 friend2.save!
 
 file = URI.open('https://res.cloudinary.com/dvwipbafx/image/upload/v1592384278/Florian_mmt3ld.jpg')
-friend2 = Friend.new(first_name: "Florian", last_name: "AllezOM", email:"florian@laposte.com", birth_date:Date.new(1985,3,18), address: "3 Boulevard Michelet, Marseille
-", phone_number: "078765677", description: "I can handle booze like a viking but I have the bladder of a small child!", price: 400)
+friend2 = Friend.new(first_name: "Florian", last_name: "AllezOM", email:"florian@laposte.com", birth_date:Date.new(1985,7,21), address: "3 Boulevard Michelet, Marseille
+", phone_number: "078765677", description: "I would love to share this amazing city secrets with you, also if you need someone to talk to I'll be glad to listen :)", price: 400)
 friend2.photo.attach(io: file, filename: 'Florian.jpg', content_type: 'image/jpg')
 friend2.save!
 
