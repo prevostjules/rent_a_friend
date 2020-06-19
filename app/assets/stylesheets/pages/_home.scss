@@ -22,4 +22,8 @@ h2 {
   font-family: $body-font;
   box-sizing: content-box;
   padding: 0.3rem 0.8rem;
+  max-width: 14%;
+  @include mobile-only{
+   max-width: 91%;
+  }
 }

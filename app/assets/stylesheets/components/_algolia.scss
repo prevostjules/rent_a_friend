@@ -5,4 +5,8 @@
   letter-spacing: 1px;
   font-family: $body-font;
   width: 50%;
+
+  @include mobile-only{
+    width: 100%;
+  }
 }
