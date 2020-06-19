@@ -16,8 +16,11 @@ class BookingsController < ApplicationController
     @friend = Friend.find(params[:friend_id])
     @booking.friend = @friend
     @booking.user = current_user
-    @booking.save!
-    redirect_to booking_path(@booking)
+    if @booking.save
+      redirect_to friend_path(@friend)
+    else
+      render 'friends/show'
+    end
   end
 
   def edit

@@ -1,9 +1,9 @@
 <div class="container min-100vh">
-  <div class="row text-center mt-5">
+  <div class="row text-center mt-5 d-flex align-items-center">
         <div class="col-12 col-lg-4">
-            <div class="friend-show__infos">
-              <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
-            </div>
+          <div class="friend-show__infos">
+            <%= cl_image_tag @friend.photo.key, height: 200, width: 200, crop: :fill, class:"avatar-friend-show" %>
+          </div>
         </div>
         <div class="col-12 col-lg-4">
             <div class="friend-show__infos-personnal">
@@ -22,38 +22,50 @@
               <h2 class="mt-2"><%= @friend.price %>€ / hour</h2>
             </div>
         </div>
-        <div class="col-12">
-            <div class="friend-show__description card__simple p-3 mt-5">
+            <div class="friend-show__description card__simple p-3 mt-5 col-12">
               <h2>Description</h2>
               <p><%= @friend.description %></p>
             </div>
+          </div>
+          <div class="row d-flex justify-content-between">
+            <div class="friend-show__form card__simple p-3 col-sm-6 fit-content mt-3">
+              <h2>Choose your date</h2>
+                <%= simple_form_for([ @friend, @booking ], remote: true) do |f| %>
+                  <%= f.input :starting_date, as: :string, input_html: { class: "datepicker" } %>
+                  <%= f.input :ending_date, as: :string, input_html: { class: "datepicker" }  %>
+                  <%= text_field_tag :address,
+                                    params[:address],
+                                    class: "form-control form-text my-1",
+                                    placeholder: "Type an address",
+                                    autocomplete: "off",
+                                    id: "friends_address" %>
+                  <%= f.submit "Book this Friend", class: "btn btn-info ml-2" %>
+                <% end %>
+          </div>
+          <div class="col-sm-5 card__simple p-3 fit-content mt-3">
             <% if @friend.bookings.exists? %>
-              <h2>I am already bookeed :</h2>
-              <% i = 0 %>
+              <h2><%= @friend.first_name %> is already booked:</h2>
               <% @friend.bookings.each do |booking| %>
-                <% i += 1 %>
-                <h3>Booking n°<%= i %></h3>
-                <p><strong>from:</strong><%= booking.starting_date %></p>
-                <p><strong>to:</strong><%= booking.ending_date %></p>
+                <% if booking.user == current_user %>
+                  <div class=" p-3 mt-2 rounded yellow">
+                    <p><strong>from: </strong><%= booking.starting_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
+                    <p class="unset-mb"><strong>to: </strong><%= booking.ending_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
+                    <%= link_to "show", booking_path(booking), class: "btn btn-dark mt-2" %>
+                  </div>
+                <% else %>
+                  <div class="grey p-3 mt-2 rounded">
+                    <p><strong>from: </strong><%= booking.starting_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
+                    <p class="unset-mb"><strong>to: </strong><%= booking.ending_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
+                  </div>
+                <% end %>
+
               <% end %>
             <% end %>
-          <div class="friend-show__form card__simple p-3 mt-3">
-            <h2>Choose your date</h2>
-            <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
-              <%= f.input :starting_date, as: :string, input_html: { class: "datepicker" } %>
-              <%= f.input :ending_date, as: :string, input_html: { class: "datepicker" }  %>
-              <%= text_field_tag :address,
-                                params[:address],
-                                class: "form-control form-text my-1",
-                                placeholder: "Type an address",
-                                autocomplete: "off",
-                                id: "friends_address" %>
-              <%= f.submit "Book this Friend", class: "btn btn-secondary" %>
-            <% end %>
           </div>
+
           <div class="container text-center mt-3">
              <%= link_to "Back to the Friends List" , friends_path, class: 'btn btn-primary mb-3' %>
           </div>
-        </div>
-  </div>
+      </div>
+
 </div>
