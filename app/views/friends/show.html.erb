@@ -27,6 +27,16 @@
               <h2>Description</h2>
               <p><%= @friend.description %></p>
             </div>
+            <% if @friend.bookings.exists? %>
+              <h2>I am already bookeed :</h2>
+              <% i = 0 %>
+              <% @friend.bookings.each do |booking| %>
+                <% i += 1 %>
+                <h3>Booking n°<%= i %></h3>
+                <p><strong>from:</strong><%= booking.starting_date %></p>
+                <p><strong>to:</strong><%= booking.ending_date %></p>
+              <% end %>
+            <% end %>
           <div class="friend-show__form card__simple p-3 mt-3">
             <h2>Choose your date</h2>
             <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
