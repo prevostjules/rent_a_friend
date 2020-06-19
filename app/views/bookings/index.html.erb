@@ -1,19 +1,28 @@
-<div class="container-md text-center card-friend p-3 min-100vh">
-
+<div class="container-md card-friend p-3 min-100vh">
+  <div>
     <% if @bookings.empty? %>
         <h1>You didn't make any reservation yet</h1>
         <% else %>
+          <h1>Your <strong>reservations</strong> :</h1>
+          <div class="col-12">
             <% @bookings.each do |booking| %>
-                <h1>Please find your <strong>reservations</strong> below:</h1>
-                <br>
-                <br>
-                You've booked <%= link_to booking.friend.first_name, friend_path(booking.friend) %>
-                from <%= booking.starting_date %>
-                to <%= booking.starting_date %> <br>
-                You can contact him at <%= booking.friend.email %>
-                <br> <br>
+                <div class="card-product mb-3 d-flex justify-content-between">
+                  <%= cl_image_tag booking.friend.photo.key, class:"avatar m-3" %>
+                  <div class="d-flex flex-column" >
+                    <div>
+                      <h2><%= link_to booking.friend.first_name, friend_path(booking.friend) %> From <%= booking.starting_date %> To <%= booking.starting_date %></h2>
+                    </div>
+                    <p>You can contact him at <%= booking.friend.email %></p>
+                  </div>
+                  <%= link_to "Edit reservation",
+                              edit_booking_path(booking),
+                              class:"btn btn-info mr-3" %>
+                </div>
             <% end %>
-     <% end %>
-    <br>
-    <%= link_to "Back to friends", friends_path, class:"btn btn-success shadow" %>
+          </div>
+    <% end %>
+    <%= link_to "Back to friends list", friends_path, class:"btn btn-success shadow m-5" %>
+
+  </div>
 </div>
+
