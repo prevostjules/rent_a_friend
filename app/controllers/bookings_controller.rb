@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.friend = @friend
     @booking.user = current_user
     if @booking.save
-      redirect_to friend_path(@friend)
+      redirect_to friend_path(@friend, anchor: "booking-#{@booking.id}")
     else
       render 'friends/show'
     end

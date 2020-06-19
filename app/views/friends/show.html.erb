@@ -48,7 +48,7 @@
               <% @friend.bookings.each do |booking| %>
                 <% if booking.user == current_user %>
                   <div class=" p-3 mt-2 rounded yellow">
-                    <p><strong>from: </strong><%= booking.starting_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
+                    <p id="booking-<%= booking.id %>"><strong>from: </strong><%= booking.starting_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
                     <p class="unset-mb"><strong>to: </strong><%= booking.ending_date.to_date.strftime('%A %d %b %Y %I:%M %p') %></p>
                     <%= link_to "show", booking_path(booking), class: "btn btn-dark mt-2" %>
                   </div>
