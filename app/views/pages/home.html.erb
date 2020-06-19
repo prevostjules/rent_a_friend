@@ -4,14 +4,14 @@
         <div class="col-12 col-lg-12 col-sm-6">
           <h1>Rent a buddy</h1>
           <p><span id="banner-typed-text"></span></p>
-          <%= form_tag friends_path, class:"col-sm-5 pl-0", method: :get do %>
+          <%= form_tag friends_path, class:"col-sm-12 pl-0", method: :get do %>
             <%= text_field_tag :query,
                                 params[:query],
                                 class: "form-control form-text my-1",
                                 placeholder: "Type a city...",
                                 autocomplete: "off",
                                 id: "friends_address" %>
-            <%= number_field_tag 'kms', nil, min: 1, max: 50, step: 1, class: "col-sm-2" %>
+            <%= number_field_tag 'kms', nil, min: 1, max: 50, step: 1, class: "col-sm-2 bar" %>
             <%= submit_tag "Buddy call !", class: "btn btn-primary" %>
           <% end %>
         </div>
