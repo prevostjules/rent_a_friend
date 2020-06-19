@@ -31,7 +31,7 @@
               <div class="card-product-infos">
                 <div class="d-flex justify-content-between mb-3">
                   <h2><%= friend.first_name %></h2>
-                  <p><%= friend.birth_date %></p>
+                  <p><%= Time.zone.now.year - friend.birth_date.year %> years old</p>
                     </div>
                       <p class="mb-3"><%= friend.description %></p>
                         <div class="d-flex justify-content-between">

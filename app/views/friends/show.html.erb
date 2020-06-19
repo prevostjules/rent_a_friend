@@ -15,7 +15,7 @@
         </div>
         <div class="col-12 col-lg-4">
             <div class="friend-show__infos-tags">
-              <h2> <%= @friend.birth_date %></h2>
+              <h2> <%= Time.zone.now.year - @friend.birth_date.year %> years old</h2>
                 <% @tags.sample(4).each do |tag| %>
                 <span class="badge badge-secondary"><%= tag %></span>
                 <% end %>
