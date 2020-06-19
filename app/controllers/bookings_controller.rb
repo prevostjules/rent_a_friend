@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.address = params[:address]
     @friend = Friend.find(params[:friend_id])
     @booking.friend = @friend
     @booking.user = current_user
@@ -39,6 +40,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:starting_date, :ending_date)
+    params.require(:booking).permit(:starting_date, :ending_date, :address)
   end
 end

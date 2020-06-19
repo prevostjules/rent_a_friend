@@ -32,6 +32,12 @@
             <%= simple_form_for [@friend, @booking], html: { class: 'text-center' } do |f| %>
               <%= f.input :starting_date, as: :string, input_html: { class: "datepicker" } %>
               <%= f.input :ending_date, as: :string, input_html: { class: "datepicker" }  %>
+              <%= text_field_tag :address,
+                                params[:address],
+                                class: "form-control form-text my-1",
+                                placeholder: "Type an address",
+                                autocomplete: "off",
+                                id: "friends_address" %>
               <%= f.submit "Book this Friend", class: "btn btn-secondary" %>
             <% end %>
           </div>
