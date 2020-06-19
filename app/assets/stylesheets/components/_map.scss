@@ -1,3 +1,11 @@
+#map {
+  width: 540px;
+  height: 540px;
+  position: sticky;
+  top: 10px;
+  // background-position: center;
+}
+
 .mapboxgl-popup {
   max-width: 200px;
   border-radius: 5px;
