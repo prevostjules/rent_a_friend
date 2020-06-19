@@ -41,6 +41,7 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
 });
 
+
 $('.carousel').carousel({
   interval: 2500
 })
